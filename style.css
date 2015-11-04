@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'bebasneue';
+    src: url(font/bebasneue.otf);
+}
+
+@font-face {
+    font-family: 'archive';
+    src: url(font/archive.otf);
+}
+
+@font-face {
+    font-family: 'narrow';
+    src: url(font/narrow.otf);
+}
+
+body {
+	overflow: hidden;
+	background: #515051;
+	margin: 0;
+}
+
+h1 {
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.totalAttacks {
+	position: absolute;
+	right:10px;
+	top:27px;
+	text-align: center;
+}
+
+.totalAttacks span {
+	font-size: 20px
+}
+
+.mapLegend {
+	position: absolute;
+	bottom:50px;
+	right: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.legendRectangle {
+	width: 20px;
+	height: 30px;
+}
+
+.legendText {
+	float: left;
+	font-size: 14px;
+	margin-left: 25px;
+	margin-top: -10px;
+}
+
+
+#slider {
+	height: 310px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	overflow: hidden;
+	width: 10%;
+	right:30px;
+	text-align: right;
+}
+
+.year {
+	opacity: 0.3;
+}
+
+.activeYear {
+	font-size: 2.4em;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+span {
+	display: block;
+	height: 30px;
+	font-size: 1.6em;
+	color: white;
+}
+
+
+#arrowup {
+	right: 28px;
+	top: 0;
+	bottom:370px;
+	margin-top:auto;
+	margin-bottom:auto;
+	position: absolute;
+	display: block;
+	width: 50px;
+	cursor: pointer;
+}
+
+#arrowdown{
+	right: 28px;
+	top: 370px;
+	bottom:0;
+	margin-top:auto;
+	margin-bottom:auto;
+	position: absolute;
+	display: block;
+	width: 50px;
+	cursor: pointer;
+}
+
+#info {
+	position: absolute;
+	left: 30px;
+	top: 20px;
+	width: 30px;
+	cursor: pointer;
+}
+
+#popup {
+	width: 50%;
+	height: 500px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	background: #5d5266;
+	display: none;
+	overflow: scroll;
+	text-align: left;
+	padding: 20px;
+}
+
+#popup h1 {
+	text-align: left;
+	font-family: 'archive';
+	margin-bottom:-12px;
+}
+
+#popup p {
+	font-family: sans-serif;
+	color: white;
+}
+
+#popupcross {
+	position: absolute;
+	right:0;
+	top:0;
+	cursor: pointer;
+}
+
+
+
+svg {
+	width: 90%;
+}
+
+svg text {
+	fill: white;
+	text-transform: uppercase;
+	font-family: 'narrow';
+}
+
+.text1, body>h1 {
+	font-family: 'archive';
+}
+
+.totalAttacks, .mapLegend, #slider {
+	font-family: 'narrow';
+}
+
+
+.country .area {
+	transition: opacity 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.country .area:hover {
+	opacity: 0.6;
+	transition: fill 0.3s;
+}
+
+.country .area:hover + text{
+	fill: white;
+	transition: fill 0.3s;
+}
+
+.country .area{
+	stroke-width: 0.3px;
+	stroke: #515051;
+}
+
+.infoBox {
+	height: 100%;
+	fill: #6d6d6d;
+	transform: translate(-570px,0px);
+	transition: transform 0.3s ease-in-out;
+}
+
+.infoText {
+	transform: translate(-600px,0px);
+	transition: transform 0.3s ease-in-out;
+}
+
+
+.country text, .active text {
+	fill: black;
+	font-family: 'bebasneue';
+}
+
+.cross {
+	cursor: pointer;
+}
+
+#Estonia .area, 
+#Latvia .area,
+#Lithuania .area,
+#Moldova .area,
+#Macedonia .area,
+#Montenegro .area,
+#Kosovo .area,
+#Poland .area,
+#Romania .area,
+#Kaliningrad .area,
+#Serbia .area,
+#Vojvodina .area,
+#Slovakia .area,
+#Slovenia .area, 
+#Ukraine .area,
+#Albania .area,
+#Bulgaria .area,
+#Srpska .area,
+#Bosnia .area,
+#Croatia .area,
+#Hungary .area,
+#Czech .area,
+#Belarus .area,
+#Corsica .area,
+#Sicily .area,
+#Sardinia .area
+ {
+	fill: grey !important;
+	cursor: default;
+}
